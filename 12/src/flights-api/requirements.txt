@@ -62,7 +62,7 @@ typing-inspection==0.4.2
 tzdata==2025.3
 urllib3==2.6.3
 uvicorn==0.40.0
-uvloop==0.22.1
+#uvloop==0.22.1
 watchfiles==1.1.1
 websockets==15.0.1
 xyzservices==2025.11.0
