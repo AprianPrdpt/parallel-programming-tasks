@@ -1,8 +1,8 @@
 # Flights API (FastAPI)
 
-"Nama : Aprian Pradipta E S
-Nim  : 235510008
-Prodi: Teknik Komputer S1"
+- Nama  : Aprian Pradipta E S
+- NIM   : 235510008
+- Prodi : Teknik Komputer S1
 
 ## Struktur Direktori
 
