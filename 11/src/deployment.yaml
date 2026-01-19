@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-async-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-async
+  template:
+    metadata:
+      labels:
+        app: fastapi-async
+    spec:
+      containers:
+      - name: fastapi-async
+        image: fastapi-async:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000

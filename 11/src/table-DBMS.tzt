@@ -1,0 +1,66 @@
+Create database:
+
+  $ createdb paralel10
+
+Env variables:
+
+  PSQL_HOME=$HOME/software/dbms/postgresql-18
+
+  export PATH=$PSQL_HOME/bin:$PATH
+  export LD_LIBRARY_PATH=$PSQL_HOME/lib:$LD_LIBRARY_PATH 
+  export PGDATA=$HOME/software/dbms/18-data
+  export PGUSER=bpdp
+  export PGPASSWORD=merdeka
+  export PGHOST=localhost
+  export PGPORT=5432
+  export PGDATABASE=paralel10
+
+$ psql
+Pager usage is off.
+Timing is on.
+psql (18.1)
+Type "help" for help.
+
+paralel10=# CREATE TABLE tabel01 (
+id serial PRIMARY KEY,
+nim integer,
+nama varchar(100));
+CREATE TABLE
+Time: 9.432 ms
+paralel10=# \dt
+          List of tables
+ Schema |  Name   | Type  | Owner 
+--------+---------+-------+-------
+ public | tabel01 | table | bpdp
+(1 row)
+
+paralel10=# SELECT * FROM tabel01;
+ id | nim | nama 
+----+-----+------
+(0 rows)
+
+Time: 0.439 ms
+paralel10=# INSERT INTO tabel01 (nim, nama) VALUES (23415, 'Mahasiswa 01');
+INSERT 0 1
+Time: 3.944 ms
+paralel10=# INSERT INTO tabel01 (nim, nama) VALUES (23416, 'Mahasiswa 02');
+INSERT 0 1
+Time: 4.724 ms
+paralel10=# INSERT INTO tabel01 (nim, nama) VALUES (23417, 'Mahasiswa 03');
+INSERT 0 1
+Time: 3.179 ms
+paralel10=# INSERT INTO tabel01 (nim, nama) VALUES (23418, 'Mahasiswa 04');
+INSERT 0 1
+Time: 2.375 ms
+paralel10=# SELECT * FROM tabel01;
+ id |  nim  |     nama     
+----+-------+--------------
+  1 | 23415 | Mahasiswa 01
+  2 | 23416 | Mahasiswa 02
+  3 | 23417 | Mahasiswa 03
+  4 | 23418 | Mahasiswa 04
+(4 rows)
+
+Time: 1.016 ms
+paralel10=# 
+
