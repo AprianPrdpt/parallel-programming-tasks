@@ -20,15 +20,15 @@ Aplikasi ini menyediakan endpoint sederhana untuk menampilkan data `Band` berdas
 ## 📁 Struktur Project
 
 .
-├── api.py
-├── piccolo_conf.py
-├── tables.py
-├── requirements.txt
-├── Dockerfile
-├── .dockerignore
-├── deployment.yaml
-├── service.yaml
-├── README.md
+```├── api.py```
+```├── piccolo_conf.py```
+```├── tables.py```
+```├── requirements.txt```
+```├── Dockerfile```
+```├── .dockerignore```
+```├── deployment.yaml```
+```├── service.yaml```
+```├── README.md ```
 
 ---
 
