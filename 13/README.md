@@ -1,5 +1,10 @@
 # FastAPI + Piccolo ORM Cloud Native Application
 
+- Nama  : Aprian Pradipta E S
+- NIM   : 235510008
+- Prodi : Teknik Komputer S1
+
+
 Project ini merupakan implementasi **RESTful API** menggunakan **FastAPI** dan **Piccolo ORM**, kemudian dikemas menjadi **aplikasi cloud native** dengan **Docker** dan dideploy menggunakan **Kubernetes**.
 
 Aplikasi ini menyediakan endpoint sederhana untuk menampilkan data `Band` berdasarkan ID.
