@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-piccolo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-piccolo
+  template:
+    metadata:
+      labels:
+        app: fastapi-piccolo
+    spec:
+      containers:
+      - name: fastapi-piccolo
+        image: fastapi-piccolo:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
